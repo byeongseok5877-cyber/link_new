@@ -1,6 +1,7 @@
 'use client'
 
-import { createClient } from '@/lib/client'
+import { createClient } from '@/lib/supabase/client'
+import styles from './page.module.css'
 
 export default function LoginPage() {
   const handleKakaoLogin = async () => {
@@ -14,11 +15,9 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <button
-        onClick={handleKakaoLogin}
-        className="rounded-lg bg-[#FEE500] px-6 py-3 font-semibold text-[#191919] hover:bg-[#FADA0A]"
-      >
+    <div className={styles.page}>
+      <h1 className={styles.logo}>링크</h1>
+      <button onClick={handleKakaoLogin} className={styles.kakao}>
         💬 카카오로 시작하기
       </button>
     </div>

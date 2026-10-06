@@ -1,0 +1,80 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-sub);
+}
+
+.input {
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background-color: var(--card-bg);
+  color: var(--text);
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+textarea.input {
+  height: 72px;
+  padding: 10px 12px;
+  resize: vertical;
+}
+
+.error {
+  margin: 0;
+  font-size: 13px;
+  color: var(--error);
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.cancel,
+.submit {
+  height: 40px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel {
+  border: 1px solid var(--border);
+  background-color: var(--card-bg);
+  color: var(--text-sub);
+}
+
+.submit {
+  border: none;
+  background-color: var(--accent);
+  color: #fff;
+}
+
+.submit:hover {
+  background-color: var(--accent-hover);
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}

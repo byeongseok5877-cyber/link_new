@@ -1,0 +1,82 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding: 0 24px;
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: -0.5px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.primary,
+.secondary {
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.primary {
+  border: none;
+  background-color: var(--accent);
+  color: #fff;
+}
+
+.primary:hover {
+  background-color: var(--accent-hover);
+}
+
+.secondary {
+  border: 1px solid var(--accent);
+  background-color: var(--card-bg);
+  color: var(--accent);
+}
+
+.secondary:hover {
+  background-color: var(--hover-bg);
+}
+
+.text {
+  height: 38px;
+  padding: 0 8px;
+  border: none;
+  background: none;
+  color: var(--text-sub);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.text:hover {
+  color: var(--text);
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 0 16px;
+  }
+
+  .primary,
+  .secondary {
+    padding: 0 12px;
+    font-size: 13px;
+  }
+}
